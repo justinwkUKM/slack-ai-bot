@@ -2,6 +2,8 @@
 
 Ben is a slack bot that helps you write various types of content using AI. Whether you need a cold email, a sales pitch, an Instagram caption, a summary, an AIDA model, a media campaign, or a code interpretation, Ben can help you draft, edit, or optimize your requests in a conversational way. Ben will use natural language processing and machine learning to generate professional and effective content for you.
 
+![Screen Shot 2023-05-01 at 9 24 23 PM](https://user-images.githubusercontent.com/20006026/235457904-ac21d04b-e6bc-4e6b-a39f-2330a71a47ab.png)
+
 ## How to use Ben
 
 To use Ben, you need to install the slack app from [here](https://slack.com/apps/A01U8RZLZJQ-ben-the-ai-writing-assistant). Once you have installed the app, you can invite Ben to any channel or direct message by typing `/invite @Ben`. You can also start a conversation with Ben by typing `@Ben` in any channel or direct message.
