@@ -1,4 +1,4 @@
-# Ben: The AI Writing Assistant
+# Ben: The SlackAI Writing Assistant
 
 🤖 Ben is a slack bot that helps you write various types of content using AI. Whether you need a cold email, a sales pitch, an Instagram caption, a summary, 💡 AIDA model, a 📣 media campaign, or a 💻 code interpretation, Ben can help you draft, edit, or optimize your requests in a conversational way. Ben will use natural language processing and machine learning to generate professional and effective content for you.
 
