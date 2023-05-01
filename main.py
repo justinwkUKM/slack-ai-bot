@@ -1,9 +1,9 @@
+from slack_bolt.adapter.fastapi.async_handler import AsyncSlackRequestHandler
+from slack_bolt.async_app import AsyncApp
+import logging
 import os
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
-from slack_bolt.adapter.flask import SlackRequestHandler
-from slack_bolt import App
-from dotenv import find_dotenv, load_dotenv
 from functions import draft_email, summary, pythonify, javascript, linux, advertise, instagram, aida, media_campaign, sales_pitch, cold_email
 from fastapi import FastAPI, Request
 
@@ -13,12 +13,8 @@ SLACK_SIGNING_SECRET = os.environ["SLACK_SIGNING_SECRET"]
 SLACK_BOT_USER_ID = os.environ["SLACK_BOT_USER_ID"]
 
 
-import logging
-
 logging.basicConfig(level=logging.DEBUG)
 
-from slack_bolt.async_app import AsyncApp
-from slack_bolt.adapter.fastapi.async_handler import AsyncSlackRequestHandler
 
 app = AsyncApp()
 app_handler = AsyncSlackRequestHandler(app)
@@ -43,8 +39,8 @@ def get_bot_user_id():
         slack_client = WebClient(token=os.environ["SLACK_BOT_TOKEN"])
         response = slack_client.auth_test()
         return response["user_id"]
-    except SlackApiError as e:
-        print(f"Error: {e}")
+    except SlackApiError as error:
+        print(f"Error: {error}")
 
 
 def my_function(text):
@@ -63,7 +59,7 @@ def my_function(text):
 
 
 @app.event("app_mention")
-async def handle_app_mentions(body, say, logger):
+async def handle_app_mentions(body, say):
     """
     Event listener for mentions in Slack.
     When the bot is mentioned, this function processes the text and sends a response.
@@ -137,15 +133,32 @@ async def handle_app_mentions(body, say, logger):
         print('media_campaign')
         response = media_campaign(text)
     else:
-      response = draft_email(text)
+        response = draft_email(text)
     await say(response)
+
 
 @api.post("/slack/events")
 async def endpoint(req: Request):
+    """
+    A function that handles incoming Slack events.
+
+    Args:
+        req (Request): A Request object containing the incoming event data.
+
+    Returns:
+        dict: A dictionary containing the response to the incoming event.
+    """
     return await app_handler.handle(req)
+
 
 @api.get("/")
 async def root():
+    """
+    A simple function that returns a JSON message.
+
+    Returns:
+        dict: A dictionary containing a "message" key with the value "Hello World!!!!".
+    """
     return {"message": "Hello World!!!!"}
 
 
