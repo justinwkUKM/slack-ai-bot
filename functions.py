@@ -11,7 +11,7 @@ load_dotenv(find_dotenv())
 
 
 def draft_email(user_input, name="Waqas"):
-    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1)
+    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
     
@@ -43,13 +43,13 @@ def draft_email(user_input, name="Waqas"):
     return response
 
 def summary(user_input):
-    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1)
+    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
     
     You are Ben, a helpful assistant that Summarize the following content {user_input}
     
-    Your goal is to help the user quickly create a perfect summary.
+    Your goal is to help the user quickly create a perfect summary. Add some emojis to your reply.
     
     """
 
@@ -68,7 +68,7 @@ def summary(user_input):
     return response
 
 def pythonify(user_input):
-    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1)
+    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
     
@@ -94,7 +94,7 @@ def pythonify(user_input):
     return response
 
 def javascript(user_input):
-    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1)
+    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
     
@@ -121,7 +121,7 @@ def javascript(user_input):
     return response
 
 def linux(user_input):
-    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1)
+    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
     
@@ -147,7 +147,7 @@ def linux(user_input):
     return response
 
 def advertise(user_input):
-    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1)
+    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
     
@@ -172,13 +172,13 @@ def advertise(user_input):
     return response
 
 def aida(user_input):
-    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1)
+    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
     
     I want you to act as an marketing expert. 
     Write an AIDA for : {user_input}
-    Add some emojis to make your reply interesting.
+    Add some emojis to your reply.
     
     """
 
@@ -197,14 +197,13 @@ def aida(user_input):
     return response
 
 def instagram(user_input):
-    chat = ChatOpenAI(model_name="gpt-4", temperature=1)
+    chat = ChatOpenAI(model_name="gpt-4", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
     
     I want you to act as an content creation expert. 
     Write an attractive SEO Optimized Instagram Caption for : {user_input}
-    Add some emojis to make your reply interesting.
-
+    Add some emojis to your reply.  
     
     """
 
@@ -223,12 +222,12 @@ def instagram(user_input):
     return response
 
 def media_campaign(user_input):
-    chat = ChatOpenAI(model_name="gpt-4", temperature=1)
+    chat = ChatOpenAI(model_name="gpt-4", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
     
-    Create a 3-month social media campaign calendar for our product with the goal to {user_input} and mention the channels we should focus on.
-    Add some emojis to make your reply interesting.
+    Create a 3-month social media campaign calendar for our product with the goal to {user_input} and mention the channels we should focus on. Make it concise with less than 800 words
+    Add some emojis to your reply.
    
     """
 
@@ -247,7 +246,7 @@ def media_campaign(user_input):
     return response
 
 def cold_email(user_input, name='Waqas'):
-    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1)
+    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
     
@@ -277,7 +276,7 @@ def cold_email(user_input, name='Waqas'):
     return response
 
 def sales_pitch(user_input):
-    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1)
+    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
     

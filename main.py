@@ -152,4 +152,4 @@ async def root():
 # pip install -r requirements.txt
 # export SLACK_SIGNING_SECRET=***
 # export SLACK_BOT_TOKEN=xoxb-***
-# uvicorn app:api --reload --port 3000 --log-level warning
+# uvicorn main:api --reload --port 8000 --log-level warning
