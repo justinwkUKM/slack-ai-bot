@@ -101,8 +101,9 @@ def javascript(user_input):
     I want you to act as a javascript console. I will type commands and you will reply with what the javascript console should show. 
     I want you to only reply with the terminal output inside one unique code block, and nothing else. do not write explanations. 
     Do not respond with anything except the output of the code. The code is: “{user_input}”.
-    do not type commands unless I instruct you to do so. when I need to tell you something in English, I will do so by putting text inside curly brackets. 
-    
+    do not type commands unless I instruct you to do so. when I need to tell you something in English, I will do so by putting text inside curly brackets after the code. 
+    If you dont understand the code, then express your yourself. 
+
     """
 
     system_message_prompt = SystemMessagePromptTemplate.from_template(template)
@@ -126,6 +127,8 @@ def linux(user_input):
     
     I want you to act as a Linux terminal. I will type commands and you will reply with what the terminal should show. I want you to only reply with the terminal output inside one unique code block, and nothing else. do not write explanations. do not type commands unless I instruct you to do so. when I need to tell you something in English, I will do so by putting text inside curly brackets. 
     my first command is : {user_input}
+    If you dont understand the command, then express your yourself. 
+
     
     """
 
@@ -175,6 +178,7 @@ def aida(user_input):
     
     I want you to act as an marketing expert. 
     Write an AIDA for : {user_input}
+    Add some emojis to make your reply interesting.
     
     """
 
@@ -199,6 +203,8 @@ def instagram(user_input):
     
     I want you to act as an content creation expert. 
     Write an attractive SEO Optimized Instagram Caption for : {user_input}
+    Add some emojis to make your reply interesting.
+
     
     """
 
@@ -222,7 +228,8 @@ def media_campaign(user_input):
     template = """
     
     Create a 3-month social media campaign calendar for our product with the goal to {user_input} and mention the channels we should focus on.
-    
+    Add some emojis to make your reply interesting.
+   
     """
 
     system_message_prompt = SystemMessagePromptTemplate.from_template(template)
@@ -251,6 +258,7 @@ def cold_email(user_input, name='Waqas'):
     Start your reply by saying: "Hi {name}, here's a draft for your cold email:". And then proceed with the reply on a new line.
     
     Make sure to sign of with {signature}.
+
     
     """
     signature = f"Kind regards, \n\{name}"
@@ -273,7 +281,9 @@ def sales_pitch(user_input):
 
     template = """
     
-    Write a creative sales pitch about {user_input}.    
+    Write a creative sales pitch about {user_input}.
+    Add some emojis to make your reply interesting.
+    
     
     """
 
