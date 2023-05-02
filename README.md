@@ -2,7 +2,8 @@
 
 🤖 Ben is a slack bot that helps you write various types of content using AI. Whether you need a cold email, a sales pitch, an Instagram caption, a summary, 💡 AIDA model, a 📣 media campaign, or a 💻 code interpretation, Ben can help you draft, edit, or optimize your requests in a conversational way. Ben will use natural language processing and machine learning to generate professional and effective content for you.
 
-![Screen Shot 2023-05-01 at 9 24 23 PM](https://user-images.githubusercontent.com/20006026/235457904-ac21d04b-e6bc-4e6b-a39f-2330a71a47ab.png)
+![Screen Shot 2023-05-01 at 10 23 37 PM](https://user-images.githubusercontent.com/20006026/235466800-60e0bfb5-357c-4f75-a74c-f51fe2a95aa1.png)
+
 ## Part 1 — Slack Setup
 
 #### 1. Create a new Slack app
@@ -113,7 +114,7 @@ Remember that if you installed ngrok via Homebrew, you can run `ngrok http 5000`
 #### 1. Create a function to draft cold emails
 
 - Create a new file called `functions.py` and insert the code from [`functions.py`](https://github.com/daveebbelaar/langchain-experiments/blob/main/slack/functions.py)
-- Import the function in your `app.py` file with `from functions import draft_email`.
+- Import the function in your `app.py` file with `from functions import media_campaign`.
 - And update the `handle_mentions` function.
 
 ## How to use Ben
