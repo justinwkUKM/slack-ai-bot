@@ -1,3 +1,6 @@
+"""
+ABC
+"""
 import os
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
@@ -5,7 +8,8 @@ from slack_bolt.adapter.flask import SlackRequestHandler
 from slack_bolt import App
 from dotenv import find_dotenv, load_dotenv
 from flask import Flask, request
-from functions import draft_email, summary, pythonify, javascript, linux, advertise, instagram, aida, media_campaign, sales_pitch, cold_email
+from functions import draft_email, summary, pythonify, javascript, \
+    linux, advertise, instagram, aida, media_campaign, sales_pitch, cold_email
 
 # Load environment variables from .env file
 load_dotenv(find_dotenv())
@@ -35,8 +39,8 @@ def get_bot_user_id():
         slack_client = WebClient(token=os.environ["SLACK_BOT_TOKEN"])
         response = slack_client.auth_test()
         return response["user_id"]
-    except SlackApiError as e:
-        print(f"Error: {e}")
+    except SlackApiError as error:
+        print(f"Error: {error}")
 
 
 def my_function(text):

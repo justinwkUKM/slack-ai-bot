@@ -1,6 +1,10 @@
+'''
+ABC
+'''
+
+from dotenv import find_dotenv, load_dotenv
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
-from dotenv import find_dotenv, load_dotenv
 from langchain.prompts.chat import (
     ChatPromptTemplate,
     SystemMessagePromptTemplate,
@@ -43,6 +47,9 @@ def draft_email(user_input, name="Waqas"):
     return response
 
 def summary(user_input):
+    '''
+    abc
+    '''
     chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
@@ -68,6 +75,9 @@ def summary(user_input):
     return response
 
 def pythonify(user_input):
+    '''
+    abc
+    '''
     chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
@@ -94,6 +104,9 @@ def pythonify(user_input):
     return response
 
 def javascript(user_input):
+    '''
+    abc
+    '''
     chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
@@ -121,6 +134,9 @@ def javascript(user_input):
     return response
 
 def linux(user_input):
+    '''
+    abc
+    '''
     chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
@@ -147,6 +163,9 @@ def linux(user_input):
     return response
 
 def advertise(user_input):
+    '''
+    abc
+    '''
     chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
@@ -172,6 +191,9 @@ def advertise(user_input):
     return response
 
 def aida(user_input):
+    '''
+    abc
+    '''
     chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
@@ -197,6 +219,9 @@ def aida(user_input):
     return response
 
 def instagram(user_input):
+    '''
+    abc
+    '''
     chat = ChatOpenAI(model_name="gpt-4", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
@@ -222,6 +247,9 @@ def instagram(user_input):
     return response
 
 def media_campaign(user_input):
+    '''
+    abc
+    '''
     chat = ChatOpenAI(model_name="gpt-4", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
@@ -246,6 +274,9 @@ def media_campaign(user_input):
     return response
 
 def cold_email(user_input, name='Waqas'):
+    '''
+    abc
+    '''
     chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """
@@ -276,6 +307,9 @@ def cold_email(user_input, name='Waqas'):
     return response
 
 def sales_pitch(user_input):
+    '''
+    abc
+    '''
     chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=1, max_retries=2, request_timeout=30)
 
     template = """

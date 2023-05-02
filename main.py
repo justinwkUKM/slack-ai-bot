@@ -1,11 +1,13 @@
-from slack_bolt.adapter.fastapi.async_handler import AsyncSlackRequestHandler
-from slack_bolt.async_app import AsyncApp
-import logging
+
 import os
+import logging
+from fastapi import FastAPI, Request
+from slack_bolt.async_app import AsyncApp
+from slack_bolt.adapter.fastapi.async_handler import AsyncSlackRequestHandler
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
-from functions import draft_email, summary, pythonify, javascript, linux, advertise, instagram, aida, media_campaign, sales_pitch, cold_email
-from fastapi import FastAPI, Request
+from functions import draft_email, summary, pythonify, javascript, linux, \
+    advertise, instagram, aida, media_campaign, sales_pitch, cold_email
 
 # Set Slack API credentials
 SLACK_BOT_TOKEN = os.environ["SLACK_BOT_TOKEN"]
